@@ -1,0 +1,1 @@
+ /Users/Serhii_Bohush/AndroidStudioProjects/bt_business/.dart_tool/flutter_gen/gen_l10n/app_localizations_en.dart /Users/Serhii_Bohush/AndroidStudioProjects/bt_business/.dart_tool/flutter_gen/gen_l10n/app_localizations.dart:  /Users/Serhii_Bohush/AndroidStudioProjects/bt_business/l10n.yaml /Users/Serhii_Bohush/AndroidStudioProjects/bt_business/lib/l10n/intl_en.arb

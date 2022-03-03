@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+# printf '>>>>> Running the Flutter formatting'
+# cd ..
+# flutter format . --line-length=100
+
+# printf '>>>>> Flutter formatting finished successful'

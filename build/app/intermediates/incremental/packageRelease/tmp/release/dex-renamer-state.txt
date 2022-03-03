@@ -1,0 +1,4 @@
+#Wed Feb 16 17:37:40 EET 2022
+base.0=/Users/Serhii_Bohush/AndroidStudioProjects/bt_business/build/app/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+renamed.0=classes.dex
+path.0=classes.dex

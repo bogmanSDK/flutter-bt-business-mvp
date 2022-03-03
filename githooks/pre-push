@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+
+printf '\n----> Running the Flutter analyze\n'
+
+flutter analyze
+if [ $? -ne 0 ]; then
+  printf '\n---->  Flutter analyze failed!'
+  exit 1
+fi
+printf '\n---->  Flutter analyze finished successful\n'
+
+printf '\n---->  Running the Flutter test\n'
+
+flutter test --no-sound-null-safety
+if [ $? -ne 0 ]; then
+  printf  '\n---->  Flutter test failed!'
+  exit 1
+fi
+printf '\n---->  Flutter test finished successful'
