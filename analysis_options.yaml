@@ -12,6 +12,6 @@ linter:
     constant_identifier_names: false
     prefer_const_constructors_in_immutables: false
     use_key_in_widget_constructors: false
-    prefer_final_fields: true
+    prefer_final_fields: false
     prefer_final_in_for_each: true
     prefer_final_locals: true

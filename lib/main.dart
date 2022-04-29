@@ -1,8 +1,34 @@
-import 'application.dart';
+import 'dart:async';
 
-void main() => DevEnvironment();
+import 'package:adaptive_theme/adaptive_theme.dart';
+import 'package:bt_business/di/injection/injection.dart';
+import 'package:bt_business/presentation/main_application.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:configuration/environment/env.dart';
 
-class DevEnvironment extends Application {
+void main() => SetupEnv();
+
+class SetupEnv extends Env {
+
   @override
-  bool get isDevelop => true;
+  FutureOr<void> onCreate() async {
+    await SystemChrome.setPreferredOrientations([
+      DeviceOrientation.portraitUp,
+    ]);
+  }
+
+  @override
+  Future? onInjection() async {
+    await Injection.inject();
+  }
+
+  @override
+  Widget onCreateView(AdaptiveThemeMode? savedThemeMode) {
+    ErrorWidget.builder = (FlutterErrorDetails details) {
+      Zone.current.handleUncaughtError(details.exception, details.stack!);
+      return Container(color: Colors.transparent);
+    };
+    return MainApp(adaptiveThemeMode: savedThemeMode);
+  }
 }

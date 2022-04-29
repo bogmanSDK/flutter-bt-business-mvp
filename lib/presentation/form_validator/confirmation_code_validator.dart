@@ -6,7 +6,8 @@ abstract class CodeFieldValidators {
     return null;
   }
 
-  static String? securityNumberMatchValidator({String? code, String? confirmCode, required String errorMessage}) {
+  static String? securityNumberMatchValidator(
+      {String? code, String? confirmCode, required String errorMessage}) {
     if (code != confirmCode) {
       return errorMessage;
     }

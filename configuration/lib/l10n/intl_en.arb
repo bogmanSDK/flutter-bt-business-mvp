@@ -1,0 +1,11 @@
+{
+  "database_exception": "Database exception",
+  "cancelled": "Cancelled",
+  "connect_timeout": "Connect timeout",
+  "receive_timeout": "Receive timeout",
+  "send_timeout": "Send timeout",
+  "connection_problem": "No network connection",
+  "connection_problem_desc": "Please double check your Wifi or 3G/4G signal.",
+  "server_not_found": "Server not found",
+  "server_unknown_error": "The system has a little problem"
+}

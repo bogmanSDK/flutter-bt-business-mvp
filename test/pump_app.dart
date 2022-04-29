@@ -1,8 +1,4 @@
 @Retry(10)
-import 'package:bt_business/data/data_sources/local/user/user_local_source_impl.dart';
-import 'package:bt_business/data/data_sources/remote/user/user_api_impl.dart';
-import 'package:bt_business/data/repositories/auth/authentication_repository_impl.dart';
-import 'package:bt_business/presentation/bloc/auth/auth_cubit.dart';
 import 'package:bt_business/presentation/bloc/common/theme_bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -17,14 +13,6 @@ extension PumpApp on WidgetTester {
       MultiBlocProvider(
         providers: [
           BlocProvider<ThemeCubit>(create: (_) => ThemeCubit()),
-          BlocProvider<AuthCubit>(
-            create: (_) => AuthCubit(
-              AuthenticationRepositoryImpl(
-                UserLocalSourceImpl(),
-                UserRemoteApiImpl(),
-              ),
-            ),
-          )
         ],
         child: BlocBuilder<ThemeCubit, ThemeData>(
           builder: (_, theme) {

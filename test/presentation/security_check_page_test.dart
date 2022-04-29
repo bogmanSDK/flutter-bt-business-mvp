@@ -1,4 +1,4 @@
-import 'package:bt_business/application.dart';
+import 'package:configuration/environment/env.dart';
 import 'package:bt_business/keys.dart';
 import 'package:bt_business/main.dart';
 import 'package:bt_business/presentation/pages/security_check/security_check_page.dart';
@@ -9,7 +9,7 @@ import '../pump_app.dart';
 void main() {
   group('Security Check Page', () {
     testWidgets('renders MaterialApp', (tester) async {
-      Application.instance = DevEnvironment();
+      Env.instance = SetupEnv();
       await tester.pumpApp(SecurityCheckPage());
       expect(find.byType(SafeArea), findsOneWidget);
       expect(find.byType(Form), findsOneWidget);
